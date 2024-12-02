@@ -8,6 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'identitas_lengkap.dart';
+import 'list_anime.dart';
 
 void main() {
   runApp(const MainApp());
@@ -62,7 +63,7 @@ class MyApp extends StatelessWidget {
             children: [
               UserAccountsDrawerHeader(
                 accountName: const Text(
-                  'Alfin Habsa Balubun',
+                  'Alfin Daud',
                   style: TextStyle(
                       color: Color.fromARGB(255, 255, 255, 255),
                       fontWeight: FontWeight.bold),
@@ -111,6 +112,18 @@ class MyApp extends StatelessWidget {
                           duration: const Duration(milliseconds: 400),
                           // reverseDuration: const Duration(milliseconds: 400),
                           child: const MangaScreen()));
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.list_alt),
+                title: const Text('List Anime'),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ListAnimePage(),
+                    ),
+                  );
                 },
               ),
               ListTile(
@@ -204,7 +217,7 @@ class MyApp extends StatelessWidget {
                 const AnimatedLogo(),
                 const SizedBox(height: 25),
                 Text(
-                  'Alfin Habsa Balubun',
+                  'Alfin Daud',
                   style: GoogleFonts.montserrat(
                       textStyle: const TextStyle(
                           fontSize: 20, fontWeight: FontWeight.bold)),

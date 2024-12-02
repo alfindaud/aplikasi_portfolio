@@ -46,7 +46,7 @@ class IdentitasLengkapPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 25),
                 Text(
-                  'Alfin Habsa Balubun',
+                  'Alfin Daud',
                   style: GoogleFonts.montserrat(
                     textStyle: const TextStyle(
                       color: Colors.white,
